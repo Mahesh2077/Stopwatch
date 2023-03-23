@@ -1,16 +1,16 @@
+/*Custom Properties*/
 :root{
   --background: #784dcf;
   --light: rgb(242, 220, 226);
   --dark: black;
 }
-
+/* CSS styling */
 body {
 margin: 8rem;
 background:var(--background);
 font-family: sans-serif;
 height:100%;
 }
-
 .wrapper {
 width: 800px;
 background-color: var(--light);
