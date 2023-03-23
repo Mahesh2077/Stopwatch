@@ -1,6 +1,6 @@
 :root{
-  --background: rgb(193, 188, 188);
-  --light: rgb(246, 235, 238);
+  --background: #784dcf;
+  --light: rgb(242, 220, 226);
   --dark: black;
 }
 
@@ -13,9 +13,12 @@ height:100%;
 
 .wrapper {
 width: 800px;
-margin: 30px auto;
+background-color: var(--light);
+margin: auto;
+padding: 30px 0px;
 color:var(--dark);
 text-align:center;
+border-radius: 2rem;
 }
 
 h1 {
@@ -38,19 +41,25 @@ button{
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   border-radius: 0.8rem;
-  background-color: #4CAF50;
+  /* background-color: #4CAF50; */
   box-shadow: 0 5px #666;
   transform: translateY(4px);
   text-decoration: none;
   overflow: hidden;
 }
-button:hover {background-color: #3e8e41}
-
-button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#button-start{
+  background-color: #98c79a;
 }
+#button-stop{
+  background-color: rgb(185, 105, 105);
+}
+#button-reset{
+  background-color: rgb(175, 175, 105);
+}
+#button-start:hover {background-color: #22a528}
+#button-stop:hover {background-color:rgb(227, 31, 31)}
+#button-reset:hover {background-color:rgb(190, 190, 26)}
+
 @media only screen and (max-width: 800px) {
   body {
     margin: 2rem;
@@ -66,9 +75,9 @@ button:active {
   align-items: center;
   justify-content: center;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 800px) {
   .wrapper {
-    width: 1200px;
+    width: 800px;
   }
 }
 .wrapper p span {
