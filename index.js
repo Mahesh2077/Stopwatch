@@ -1,5 +1,4 @@
 window.onload = function () {
-  
   var sec = 00; 
   var mili = 00; 
   var appendMili = document.getElementById("mili")
@@ -27,9 +26,6 @@ window.onload = function () {
     appendMili.innerHTML = mili;
   	appendSec.innerHTML = sec;
   }
-  
-   
-  
   function startTimer () {
     mili++; 
     
