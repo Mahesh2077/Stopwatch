@@ -27,6 +27,9 @@ h1 {
 #sec, #mili {
   font-size: 6rem;
 }
+p{
+  margin: 20px;
+}
 
 button{
   box-sizing: border-box;
@@ -48,7 +51,7 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   body {
     margin: 2rem;
   }
@@ -63,13 +66,15 @@ button:active {
   align-items: center;
   justify-content: center;
 }
-
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+  }
+}
 .wrapper p span {
   font-size: 0.5em;
 }
-p{
-  margin: 20px;
-}
+
 
 
 
