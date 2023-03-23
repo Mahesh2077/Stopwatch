@@ -1,5 +1,5 @@
 :root{
-  --background: lightgray;
+  --background: rgb(245, 240, 240);
   --light: rgb(246, 235, 238);
   --dark: black;
 }
@@ -28,23 +28,24 @@ h1 {
   font-size:4em;
 }
 
-.control button{
+button{
+  box-sizing: border-box;
   font-size: 2rem;
   margin: 0.5rem;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   border-radius: 0.8rem;
+  background-color: #4CAF50;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  text-decoration: none;
+  overflow: hidden;
+}
+button:hover {background-color: #3e8e41}
+
+button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-/* .button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-} */
-
-
 
