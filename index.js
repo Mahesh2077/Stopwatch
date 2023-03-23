@@ -1,3 +1,4 @@
+//Variable declaration
 window.onload = function () {
   var sec = 00; 
   var mili = 00; 
@@ -7,18 +8,15 @@ window.onload = function () {
   var buttonStop = document.getElementById('button-stop');
   var buttonReset = document.getElementById('button-reset');
   var Interval ;
-
+  
+  //Function
   buttonStart.onclick = function() {
-    
     clearInterval(Interval);
      Interval = setInterval(startTimer, 10);
   }
-  
     buttonStop.onclick = function() {
        clearInterval(Interval);
   }
-  
-
   buttonReset.onclick = function() {
      clearInterval(Interval);
     mili = "00";
