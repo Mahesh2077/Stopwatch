@@ -1,52 +1,60 @@
-//variables
-let minutes = 0;
-let seconds = 0;
-let milliseconds = 0;
-let intervalId;
+window.onload = function () {
+  
+  var seconds = 00; 
+  var tens = 00; 
+  var appendTens = document.getElementById("tens")
+  var appendSeconds = document.getElementById("seconds")
+  var buttonStart = document.getElementById('button-start');
+  var buttonStop = document.getElementById('button-stop');
+  var buttonReset = document.getElementById('button-reset');
+  var Interval ;
 
-//DOM elements
-const minutesElement = document.getElementById('minutes');
-const secondsElement = document.getElementById('seconds');
-const millisecondsElement = document.getElementById('milliseconds');
-const startBtn = document.getElementById('startBtn');
-const stopBtn = document.getElementById('stopBtn');
-const resetBtn = document.getElementById('resetBtn');
+  buttonStart.onclick = function() {
+    
+    clearInterval(Interval);
+     Interval = setInterval(startTimer, 10);
+  }
+  
+    buttonStop.onclick = function() {
+       clearInterval(Interval);
+  }
+  
 
-//button event listeners
-startBtn.addEventListener('click', startStopwatch);
-stopBtn.addEventListener('click', stopStopwatch);
-resetBtn.addEventListener('click', resetStopwatch);
-
-//stopwatch functions
-function startStopwatch() {
-  intervalId = setInterval(() => {
-    milliseconds += 10;
-    if (milliseconds === 1000) {
-      seconds += 1;
-      milliseconds = 0;
+  buttonReset.onclick = function() {
+     clearInterval(Interval);
+    tens = "00";
+  	seconds = "00";
+    appendTens.innerHTML = tens;
+  	appendSeconds.innerHTML = seconds;
+  }
+  
+   
+  
+  function startTimer () {
+    tens++; 
+    
+    if(tens <= 9){
+      appendTens.innerHTML = "0" + tens;
     }
-    if (seconds === 60) {
-      minutes += 1;
-      seconds = 0;
+    
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+      
+    } 
+    
+    if (tens > 99) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
     }
-    updateTime();
-  }, 10);
-}
+    
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+  
+  }
+  
 
-function stopStopwatch() {
-  clearInterval(intervalId);
-}
-
-function resetStopwatch() {
-  clearInterval(intervalId);
-  minutes = 0;
-  seconds = 0;
-  milliseconds = 0;
-  updateTime();
-}
-
-function updateTime() {
-  minutesElement.innerText = minutes.toString().padStart(2, '0');
-  secondsElement.innerText = seconds.toString().padStart(2, '0');
-  millisecondsElement.innerText = milliseconds.toString().padStart(2, '0');
 }
